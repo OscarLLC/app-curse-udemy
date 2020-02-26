@@ -1,5 +1,18 @@
 import React, {Component} from 'react'
 
+class Contador extends Component{
+  constructor(){
+    super()
+    this.state = {contador: 1}
+    setInterval(()=>{
+      this.setState({contador: this.state.contador + 1})
+    }, 1000)
+  }
+  render(){
+    return <span>{this.state.contador}</span>
+  }
+}
+
 class TextUno extends Component{
   render(){
     const {enenciadoUno,enenciadoDos,numero,boolean,arrayNumber } = this.props
@@ -43,6 +56,7 @@ class Text extends Component{
           arrayNumber={[1,2,2,7]}
         />
          <TituloDefault />
+         <Contador />
       </div>
     )
   }
