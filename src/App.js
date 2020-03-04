@@ -9,9 +9,15 @@ class Contador extends Component{
     }, 1000)
   }
   render(){
-    return <span>{this.state.contador}</span>
-  }
+    return <numeroContador numeroCo = {this.state.contador} />
+  } 
 }
+
+class numeroContador extends Component{
+  render(){
+    return <p>{this.props.numeroCo}</p>
+  }
+}   
 
 class TextUno extends Component{
   render(){
