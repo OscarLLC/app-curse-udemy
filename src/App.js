@@ -62,7 +62,7 @@ class Text extends Component{
           arrayNumber={[1,2,2,7]}
         />
          <TituloDefault />
-         <Contador />
+         <Contador /> 
       </div>
     )
   }
