@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Condicional from './Section/Condicional'
+import List from './Section/List'
 
 class Contador extends Component {
   constructor(props){
@@ -72,6 +73,7 @@ class Text extends Component{
          <TituloDefault />
          <Contador contadorIncial = {200} />
          <Condicional />
+         <List />
       </div>
     )
   }
