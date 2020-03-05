@@ -1,32 +1,39 @@
 import React, {Component} from 'react'
 
-class Contador extends Component{
-  constructor(){
-    super()
-    this.state = {contador: 1}
+class Contador extends Component {
+  constructor(props){
+    super(props)
+    this.state = {contador: this.props.contadorIncial}
     setInterval(()=>{
       this.setState({contador: this.state.contador + 1})
-    }, 1000)
+    },1000)
   }
   render(){
-    return <numeroContador numeroCo = {this.state.contador} />
-  } 
+    return(
+    <ContadorHijo numerito ={this.state.contador} />
+    )
+  }
 }
 
-class numeroContador extends Component{
+Contador.defaultProps = {
+  contadorIncial: 0
+}
+
+class ContadorHijo extends Component{
   render(){
-    return <p>{this.props.numeroCo}</p>
+    return(
+    <p>{this.props.numerito}</p>
+    )
   }
-}   
+}
 
 class TextUno extends Component{
   render(){
-    const {enenciadoUno,enenciadoDos,numero,boolean,arrayNumber } = this.props
+    const {enenciadoUno,enenciadoDos,boolean,arrayNumber } = this.props
     return(
       <div>
         <p>{enenciadoUno}</p>
         <p>{enenciadoDos}</p>
-        <p>{numero}</p>
          <p>{boolean} </p>
          <p>{arrayNumber.join(',')}</p>
       </div>
@@ -62,7 +69,7 @@ class Text extends Component{
           arrayNumber={[1,2,2,7]}
         />
          <TituloDefault />
-         <Contador /> 
+         <Contador contadorIncial = {200} />
       </div>
     )
   }
