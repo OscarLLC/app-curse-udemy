@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import Condicional from './Section/Condicional'
 import List from './Section/List'
+import Datas from './Section/Datas'
 
 class Contador extends Component {
   constructor(props){
@@ -74,6 +75,7 @@ class Text extends Component{
          <Contador contadorIncial = {200} />
          <Condicional />
          <List />
+         <Datas />
       </div>
     )
   }
