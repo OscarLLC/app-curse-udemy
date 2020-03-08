@@ -5,10 +5,11 @@ import Car from '../Data/Car.json'
 
 class DataItem extends Component{
   render(){
-    const {Car} = this.props
+    const {Car, id} = this.props
     return(
       <div>
          <li>
+            <p>key: {id}</p>
             <p><strong>Nombre: </strong>{Car.name}</p>
             <p><strong>Marca. </strong>{Car.company}</p>
           </li>
@@ -26,7 +27,7 @@ class Datas extends Component{
           {
             Car.map( Car =>{
               return(
-               <DataItem key={Car.id} Car={Car} />
+               <DataItem id={Car.id} key={Car.id} Car={Car} />
               )
             })
           }

@@ -1,7 +1,9 @@
 import React, {Component} from 'react'
-import Condicional from './Section/Condicional'
-import List from './Section/List'
-import Datas from './Section/Datas'
+import Condicional from './Component/Condicional'
+import List from './Component/List'
+import Datas from './Component/Datas'
+import Button from './Component/Events'
+import Children from './Component/Children'
 
 class Contador extends Component {
   constructor(props){
@@ -66,7 +68,7 @@ class Text extends Component{
         <h1>texto principal</h1>
         <TextUno 
           enenciadoUno="te amo amor nunca lo olvides te amo mucho"
-          enenciadoDos="eres y seras mi unico amor te amo"
+          enenciadoDos="eres y seras mi unico amor te amoñññññññññññññññ"
           numero={2}
           boolean
           arrayNumber={[1,2,2,7]}
@@ -76,6 +78,13 @@ class Text extends Component{
          <Condicional />
          <List />
          <Datas />
+         <Button />
+         <Children>
+           hola este es un contenido
+         </Children>
+         <Children>
+           este es otro contenido
+         </Children>
       </div>
     )
   }
