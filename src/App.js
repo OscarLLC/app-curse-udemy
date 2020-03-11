@@ -4,6 +4,7 @@ import List from './Component/List'
 import Datas from './Component/Datas'
 import Button from './Component/Events'
 import Children from './Component/Children'
+import UseChildren from './Component/UsePropsTypes'
 
 
 class Contador extends Component {
@@ -82,7 +83,30 @@ class Text extends Component{
          <Button />
          <Children>
            <h2>Estamos usando las props especial children</h2>
+            <p>Hola este es otro contenido</p>
          </Children>
+         <Children>
+           <h2>especial children</h2>
+            <p>otro contenido</p>
+         </Children>
+         <UseChildren
+          title="PropsChildres"
+          autor="Lopez"
+          content=" especial Children
+          en esta clase "
+         >
+          <p>hablar sobre ello {this.props.children} <em>Estas clases de react son
+            </em><br /></p>
+         </UseChildren>
+         <UseChildren
+          title="UsoPropsChildres"
+          autor="Developer Lopez"
+          content="Mas especial Children
+          en esta clase "
+         >
+          <p>este es otro mas para hablar sobre ello {this.props.children} <em>Estas clases de react son
+            </em><br /></p>
+         </UseChildren>
       </div>
     )
   }
