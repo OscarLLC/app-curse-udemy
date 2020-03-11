@@ -5,6 +5,7 @@ import Datas from './Component/Datas'
 import Button from './Component/Events'
 import Children from './Component/Children'
 
+
 class Contador extends Component {
   constructor(props){
     super(props)
@@ -67,9 +68,9 @@ class Text extends Component{
       <div>
         <h1>texto principal</h1>
         <TextUno 
-          enenciadoUno="te amo amor nunca lo olvides te amo mucho"
-          enenciadoDos="eres y seras mi unico amor te amoñññññññññññññññ"
-          numero={2}
+          enenciadoUno="vamos al nivel de react"
+          enenciadoDos="En el proximo aprendizaje estaremos con styles component"
+          nume ro={2}
           boolean
           arrayNumber={[1,2,2,7]}
         />
@@ -80,10 +81,7 @@ class Text extends Component{
          <Datas />
          <Button />
          <Children>
-           hola este es un contenido
-         </Children>
-         <Children>
-           este es otro contenido
+           <h2>Estamos usando las props especial children</h2>
          </Children>
       </div>
     )
