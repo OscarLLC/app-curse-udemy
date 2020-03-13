@@ -90,17 +90,8 @@ class Text extends Component{
             <p>otro contenido</p>
          </Children>
          <UseChildren
-          title="PropsChildres"
-          autor="Lopez"
-          content=" especial Children
-          en esta clase "
-         >
-          <p>hablar sobre ello {this.props.children} <em>Estas clases de react son
-            </em><br /></p>
-         </UseChildren>
-         <UseChildren
           title="UsoPropsChildres"
-          autor="Developer Lopez"
+          autor="oscar"
           content="Mas especial Children
           en esta clase "
          >
