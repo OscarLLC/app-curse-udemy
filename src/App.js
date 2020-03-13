@@ -5,6 +5,7 @@ import Datas from './Component/Datas'
 import Button from './Component/Events'
 import Children from './Component/Children'
 import UseChildren from './Component/UsePropsTypes'
+import Ciclovdconstructor from './Component/Ciclovdconstructor'
 
 
 class Contador extends Component {
@@ -98,6 +99,7 @@ class Text extends Component{
           <p>este es otro mas para hablar sobre ello {this.props.children} <em>Estas clases de react son
             </em><br /></p>
          </UseChildren>
+         <Ciclovdconstructor />
       </div>
     )
   }
